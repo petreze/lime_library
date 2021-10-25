@@ -40,11 +40,6 @@ contract Library is Ownable {
         _;
     }
     
-   /* modifier haventBorrowed(uint _bookId) {
-        require(msg.sender != bookToUser[_bookId]);
-        _;
-    }*/
-    
     modifier onlyBorrower(uint _bookId) {
         require(msg.sender == bookToUser[_bookId]);
         _;
